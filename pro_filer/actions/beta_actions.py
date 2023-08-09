@@ -5,11 +5,13 @@ def show_deepest_file(context):
     if not context["all_files"]:
         print("No files found")
     else:
-        deepest_file = max(context["all_files"], key=lambda x: x.count("/"))
+        deepest_file = max(
+            context["all_files"], key=lambda x: x.count("/")
+        )  # Req 1
         print(f"Deepest file: {deepest_file}")
 
 
-def find_file_by_name(context, search_term, case_sensitive=True):
+def find_file_by_name(context, search_term, case_sensitive=True):  # Req 2
     if not search_term:
         return []
 
