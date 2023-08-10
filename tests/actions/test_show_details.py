@@ -3,7 +3,7 @@ import datetime
 import os
 
 
-def test_inexistent_show_details(capsys):
+def test_inexistent_show_details(capsys):  # Terceiro ponto
     context = {"base_path": "inochi.jpg"}
 
     show_details(context)
@@ -11,7 +11,7 @@ def test_inexistent_show_details(capsys):
     assert capsys.readouterr().out == "File 'inochi.jpg' does not exist"
 
 
-def test_existing_show_details(capsys, tmp_path):
+def test_existing_show_details(capsys, tmp_path):  # Quinto ponto
     mafuko_file = tmp_path / "mafuko.txt"
 
     mafuko_file.touch()
@@ -37,7 +37,7 @@ def test_existing_show_details(capsys, tmp_path):
     assert capsys.readouterr().out == correct_data
 
 
-def test_existing_no_ext_show_details(capsys, tmp_path):
+def test_existing_no_ext_show_details(capsys, tmp_path):  # Quarto ponto
     soraruko_file = tmp_path / "soraruko"
 
     soraruko_file.touch()
