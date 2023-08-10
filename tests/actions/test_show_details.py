@@ -29,7 +29,7 @@ def test_existing_show_details(capsys, tmp_path):  # Quinto ponto
         os.path.getmtime(mafuko_file)
     ).strftime("%Y-%m-%d")
     correct_data = (
-        f"File name: {mafuko_file}\n"
+        "File name: mafuko.txt\n"
         f"File size in bytes: {mafuko_file_size}\n"
         "File type: file\n"
         "File extension: .txt\n"
@@ -53,7 +53,7 @@ def test_existing_no_ext_show_details(capsys, tmp_path):  # Quarto ponto
         os.path.getmtime(soraruko_file)
     ).strftime("%Y-%m-%d")
     correct_data = (
-        f"File name: {soraruko_file}\n"
+        "File name: soraruko\n"
         f"File size in bytes: {soraruko_file_size}\n"
         "File type: file\n"
         "File extension: [no extension]\n"
