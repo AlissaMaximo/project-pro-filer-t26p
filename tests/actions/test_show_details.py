@@ -2,6 +2,8 @@ from pro_filer.actions.main_actions import show_details  # NOQA
 import datetime
 import os
 
+# Req4
+
 
 def test_inexistent_show_details(capsys):  # Terceiro ponto
     context = {"base_path": "inochi.jpg"}
