@@ -50,9 +50,9 @@ def test_over_five_show_preview(capsys):
     correct = (
         "Found 6 files and 6 directories\n"
         "First 5 files: ['ado.txt', 'soraru.txt', 'amatsuki.txt', "
-        "'lon.txt', 'uratanuki.txt', 'nanawoakari.txt', ]\n"
+        "'lon.txt', 'uratanuki.txt']\n"
         "First 5 directories: ['utaites', 'songs', 'mvs', "
-        "'audios', 'illusts', 'merch']"
+        "'audios', 'illusts']"
     )
 
     assert output == correct
