@@ -10,7 +10,9 @@ def test_inexistent_show_details(capsys):  # Terceiro ponto
 
     show_details(context)
 
-    assert capsys.readouterr().out == "File 'inochi.jpg' does not exist"
+    assert (
+        capsys.readouterr().out.strip() == "File 'inochi.jpg' does not exist"
+    )
 
 
 def test_existing_show_details(capsys, tmp_path):  # Quinto ponto
@@ -54,7 +56,7 @@ def test_existing_no_ext_show_details(capsys, tmp_path):  # Quarto ponto
         f"File name: {soraruko_file}\n"
         f"File size in bytes: {soraruko_file_size}\n"
         "File type: file\n"
-        "File extension: .txt\n"
+        "File extension: [no extension]\n"
         f"Last modified date: {ready_date}\n"
     )
 
