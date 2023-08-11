@@ -35,10 +35,11 @@ def test_two_duplicate_files(tmp_path):
     manunchan_one.write_text("Manunchan")
     manunchan_two.write_text("Manunchan")
 
-    context = {"all_files": [str(manunchan_two), str(manunchan_one)]}
-    outcome = find_duplicate_files(context)
+    context = {"all_files": [str(manunchan_one), str(manunchan_two)]}
 
-    assert outcome == [(str(manunchan_two), str(manunchan_one))]
+    assert find_duplicate_files(context) == [
+        (str(manunchan_one), str(manunchan_two))
+    ]
 
 
 def test_several_find_duplicate_files(tmp_path):
@@ -54,6 +55,6 @@ def test_several_find_duplicate_files(tmp_path):
     outcome = find_duplicate_files(context)
 
     assert len(outcome) == 3
-    assert (ahonosakata, senra) in outcome
-    assert (ahonosakata, shima) in outcome
-    assert (senra, shima) in outcome
+    assert (str(ahonosakata), str(senra)) in outcome
+    assert (str(ahonosakata), str(shima)) in outcome
+    assert (str(senra), str(shima)) in outcome
