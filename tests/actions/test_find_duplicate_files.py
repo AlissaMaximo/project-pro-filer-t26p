@@ -38,7 +38,7 @@ def test_two_duplicate_files(tmp_path):
     context = {"all_files": [str(manunchan_two), str(manunchan_one)]}
     outcome = find_duplicate_files(context)
 
-    assert outcome == [str(manunchan_two), str(manunchan_one)]
+    assert outcome == [(str(manunchan_two), str(manunchan_one))]
 
 
 def test_several_find_duplicate_files(tmp_path):
