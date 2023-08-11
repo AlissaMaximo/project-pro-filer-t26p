@@ -29,8 +29,8 @@ def test_inexistent_find_duplicate_files(tmp_path):
 
 
 def test_two_duplicate_files(tmp_path):
-    manunchan_one = tmp_path / "manunchan.txt"
-    manunchan_two = tmp_path / "manunchan.txt"
+    manunchan_one = tmp_path / "manunchan1.txt"
+    manunchan_two = tmp_path / "manunchan2.txt"
 
     manunchan_one.write_text("Manunchan")
     manunchan_two.write_text("Manunchan")
